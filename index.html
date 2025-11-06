@@ -18,13 +18,29 @@
       font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.7;
       color: #ffffff;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #2c1d3e 100%);
+      background-image: url('https://i.ibb.co/84ffsSxc/Power-BI-gif-header.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       overflow-x: hidden;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
     }
 
     .container {
@@ -37,6 +53,11 @@
     section {
       padding: 6rem 0;
       position: relative;
+    }
+
+    #solicitudes {
+      border-radius: 24px;
+      overflow: hidden;
     }
 
     .section-title {
@@ -276,9 +297,8 @@
 </head>
 <body>
 
-  <section id="solicitudes" style="background-image: url('https://i.ibb.co/84ffsSxc/Power-BI-gif-header.gif'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; border-radius: 24px; overflow: hidden;">
+  <section id="solicitudes">
     <div class="solicitudes-ambient-bg"></div>
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
     <div class="container" style="position: relative; z-index: 2;">
       <div class="form-frame"></div>
       <h2 class="section-title">Solicitudes</h2>
